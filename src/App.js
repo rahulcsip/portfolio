@@ -8,6 +8,7 @@ import Blog from "./root/pages/Blog";
 import Header from "./root/component/Header";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Audio ,Watch } from  'react-loader-spinner'
+import  './App.css'
 const App = () => {
 
   const [ loader , setLoader ] = useState(true)

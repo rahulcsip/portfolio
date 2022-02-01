@@ -1,5 +1,8 @@
 import Header from "../component/Header";
 import Particles from "react-tsparticles";
+import Home from "./Home";
+
+import { Typewriter } from 'react-simple-typewriter'
 const About = () => {
   const particlesInit = (main) => {
     console.log(main);
@@ -11,25 +14,34 @@ const About = () => {
     console.log(container);
   };
 
+  const handleType = (count) => {
+    // access word count number
+    console.log(count)
+  }
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`)
+  }
   return (
-    <div style={{ backgroundColor: "white", padding: 10 }}>
+    <div style={{ backgroundColor: "white", padding: 0 }}>
       {/* Header */}
 
       <Particles
         style={{ position: "absolute" }}
         id="tsparticles"
-        height={"90vh"}
+        height={"100vh"}
+        width={"100vw"}
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
           fullScreen: {
             zIndex: 0,
-            enable: true,
+            enable: false,
           },
 
           background: {
             color: {
-              value: "#00aadd",
+              value: "#000",
             },
           },
           fpsLimit: 60,
@@ -105,16 +117,39 @@ const About = () => {
         }}
       />
       <Header />
-      <div style={{ position:"absolute",}}>
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <p>A well-known quote, contained in a blockquote element.</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </figcaption>
-      </figure>
+      <div style={{ position:"absolute",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",width:"100%",}}>
+       
+      <div style={{marginTop:"15%",marginBottom:"15%"}}>
+      <h1 style={{ margin: 'auto 0', fontWeight: 'normal' ,color:"white",opacity:.5}}> Hi There!</h1>
+      <h1 style={{ margin: 'auto 0', fontWeight: 'normal' ,color:"white",opacity:.8}}>
+        I'M RAHUL PANDEY
+       
+      </h1>
+      <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
+      <span style={{ color: 'white', fontWeight: 'bold', }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['React Native', 'React Js', 'Developer !']}
+            loop={1000}
+            cursor
+            cursorStyle='_'
+            typeSpeed={50}
+            deleteSpeed={30}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            onType={handleType}
+          />
+        </span>
+       
+      </h1>
+      
+
+
+
+      
       </div>
+      </div>
+      
     </div>
   );
 };
