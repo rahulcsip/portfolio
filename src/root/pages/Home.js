@@ -419,7 +419,7 @@ const Home = (props) => {
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="https://wallpapercave.com/wp/wp2848566.jpg"
+              src="https://www.businessinsider.in/photo/81769906/how-to-reverse-image-search-on-google-to-find-information-related-to-a-specific-photo.jpg?imgsize=297676"
               class="d-block w-100"
               alt="..."
             />
@@ -499,7 +499,7 @@ const Home = (props) => {
         style={{ backgroundColor: "white", padding: 10 }}
       >
         {/* Header */}
-        <Header />
+        <Header  dark/>
 
         {carsoulFirst()}
 

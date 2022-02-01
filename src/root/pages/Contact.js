@@ -3,7 +3,7 @@ import Header from '../component/Header'
 const Contact = ()=>{
     return <div  style={{height:'100vh',backgroundColor:'white',padding:10}}>
 {/* Header */}
-<Header/>
+<Header dark/>
 <div class="container">
 <form  class="row g-3">
   <div class="col-md-6">

@@ -51,7 +51,7 @@ export default function Blog() {
 
   return (
     <div className="container-fluid">
-      <Header />
+      <Header dark/>
       <Timeline position="alternate">
         {/* <TimelineItem>
           <TimelineOppositeContent
