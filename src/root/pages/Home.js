@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../component/Footer";
-
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import Header from "../component/Header";
 import { Audio, Watch } from "react-loader-spinner";
 const skills = [
@@ -203,27 +208,27 @@ const Home = (props) => {
               const { id, tech, description, icon } = item;
               return (
                 id % 2 == 0 && (
-                  <div
-                    style={{
-                      margin: "5%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    class="card"
-                  >
-                    <img
-                      src={icon}
-                      class="card-img-top "
-                      style={{ height: "35%", width: "35%" }}
-                      alt="..."
-                    />
-                    <div class="card-body" style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:
-                  "column"}}>
-                      <h5 class="card-title">{tech}</h5>
-                      <p style={{textAlign:"justify"}} class="card-text">{description}</p>
-                    </div>
-                  </div>
+                  <Card sx={{ maxWidth: 345 }} style={{marginBottom:30}}>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    
+                    image={icon}
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {tech}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                    {description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                  
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
                 )
               );
             })}
@@ -242,21 +247,26 @@ const Home = (props) => {
               const { id, tech, description, icon } = item;
               return (
                 id % 2 !== 0 && (
-                  <div
-                    style={{
-                      margin: "5%",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                    class="card"
-                  >
-                    <img src={icon} class="card-img-top " style={{height:"45%",width:"45%"}} alt="..." />
-                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:
-                  "column"}} class="card-body">
-                      <h5 class="card-title">{tech}</h5>
-                      <p  style={{textAlign:"justify"}} class="card-text">{description}</p>
-                    </div>
-                  </div>
+                  <Card sx={{ maxWidth: 345 }} style={{marginBottom:30}}>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={icon}
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {tech}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                    {description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                  
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
                 )
               );
             })}
@@ -508,7 +518,7 @@ const Home = (props) => {
         {skillsInfo()}
 
         {myMethodology()}
-
+        
         {quoteView()}
         {/* footer */}
         <Footer />

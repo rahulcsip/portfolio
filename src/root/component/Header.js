@@ -87,7 +87,7 @@ const Header = (props) => {
             justifyContent: "center",
           }}
         >
-          <h1 style={{fontFamily: 'Josefin Slab'}}>{`< Rahul Pandey />`}</h1>
+          <h1 style={{fontamily: 'Josefin Slab'}}>{`< Rahul Pandey />`}</h1>
         </div>
         <button
           class="navbar-toggler"
