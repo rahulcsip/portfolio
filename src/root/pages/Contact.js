@@ -1,54 +1,74 @@
 import Header from '../component/Header'
-
+import ParticlesBackground from '../component/ParticlesBackground'
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import TextField from '@mui/material/TextField';
 const Contact = ()=>{
-    return <div  style={{height:'100vh',backgroundColor:'white',padding:10}}>
+    return <div  style={{padding:10}}>
 {/* Header */}
+{/* <ParticlesBackground/> */}
 <Header dark/>
-<div class="container">
+<div class="container" style={{paddingTop:30}}>
+  <h3 style={{marginBottom:50}}>Fill up a small form, and we will get back to you in 24*7</h3>
 <form  class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4"/>
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4"/>
+
+  
+  <div class="col-12">
+  <TextField
+  style={{width:"40%"}}
+          required
+          id="outlined-required"
+          label="Name"
+        //  defaultValue="Hello World"
+        />
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
+  <TextField
+  style={{width:"40%"}}
+          required
+          id="outlined-required"
+          label="Email"
+          
+        //  defaultValue="Hello World"
+        />
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity"/>
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip"/>
+  <TextField
+  style={{width:"40%"}}
+          required
+        
+          type={'number'}
+          id="outlined-required"
+          label="Mobile Number"
+        //  defaultValue="Hello World"
+        />
   </div>
   <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck"/>
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
+  <TextField
+  style={{width:"40%"}}
+          required
+          multiline
+          minRows={3}
+         
+          id="outlined-required"
+          label="Message"
+        //  defaultValue="Hello World"
+        />
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+ 
+  <div class="col-3">
+  <Button  variant="contained" endIcon={<SendIcon />}>
+      SUBMIT
+      </Button>
+  
   </div>
-</form>
+
+ 
+    
+
+ 
+ </form>
 </div>
     </div>
   }
