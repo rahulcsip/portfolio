@@ -28,11 +28,10 @@ const About = () => {
 
       <Particles
         style={{ position: "absolute" }}
-        id="tsparticles"
-        height={"100vh"}
-        width={"100vw"}
-        init={particlesInit}
-        loaded={particlesLoaded}
+        
+       
+      
+     
         options={{
           fullScreen: {
             zIndex: 0,

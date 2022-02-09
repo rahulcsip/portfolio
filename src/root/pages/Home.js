@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../component/Footer";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Header from "../component/Header";
+import Particles from "react-tsparticles";
+import { Typewriter } from "react-simple-typewriter";
 import { Audio, Watch } from "react-loader-spinner";
+import ParticlesBackground from "../component/ParticlesBackground";
 const skills = [
   {
     id: 1,
@@ -122,6 +125,15 @@ const methodology = [
 const Home = (props) => {
   const [problems, setProblemSolved] = useState([]);
 
+  const handleType = (count) => {
+    // access word count number
+    console.log(count);
+  };
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`);
+  };
+
   const projectDeliverInfo = () => {
     return (
       <div
@@ -208,27 +220,25 @@ const Home = (props) => {
               const { id, tech, description, icon } = item;
               return (
                 id % 2 == 0 && (
-                  <Card sx={{ maxWidth: 345 }} style={{marginBottom:30}}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    
-                    image={icon}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {tech}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                    {description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                  
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
-                </Card>
+                  <Card sx={{ maxWidth: 345 }} style={{ marginBottom: 30 }}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={icon}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {tech}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">Learn More</Button>
+                    </CardActions>
+                  </Card>
                 )
               );
             })}
@@ -247,26 +257,25 @@ const Home = (props) => {
               const { id, tech, description, icon } = item;
               return (
                 id % 2 !== 0 && (
-                  <Card sx={{ maxWidth: 345 }} style={{marginBottom:30}}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={icon}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {tech}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                    {description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                  
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
-                </Card>
+                  <Card sx={{ maxWidth: 345 }} style={{ marginBottom: 30 }}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={icon}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {tech}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">Learn More</Button>
+                    </CardActions>
+                  </Card>
                 )
               );
             })}
@@ -306,38 +315,38 @@ const Home = (props) => {
               index < 3 && (
                 <div
                   style={{
-                    backgroundColor: "#00aaee",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-evenly",
-                    alignItems: "center",
-                    width: "25%",
-                    borderRadius: 8,
-                    marginRight: 30,
-                    paddingTop: 10,
-                    boxShadow: "10px 5px 10px steelblue",
+                    // backgroundColor: "#00aaee",
+                    // display: "flex",
+                    // flexDirection: "column",
+                    // justifyContent: "space-evenly",
+                    // alignItems: "center",
+                    // width: "25%",
+                    // borderRadius: 8,
+                    // marginRight: 30,
+                    // paddingTop: 10,
+                    // boxShadow: "10px 5px 10px steelblue",
+                    marginRight: "10%",
                   }}
                 >
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrNG_bGBoDCAq0qIP92LzvTm4ZSeflr9bf2A&usqp=CAU"
-                    class="img-fluid"
-                    alt="..."
-                  />
-                  {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrNG_bGBoDCAq0qIP92LzvTm4ZSeflr9bf2A&usqp=CAU" alt= "methodology Image" height={100} width = {150} /> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h1 style={{ fontWeight: "bold", paddingRight: 10 }}>
-                      {id === 0 ? `0${number}` : number}
-                    </h1>
-                    <h3 style={{}}> {method}</h3>
-                  </div>
-
-                  <h5 style={{ textAlign: "center" }}>{description}</h5>
+                  <Card sx={{ maxWidth: 345 }} style={{ marginBottom: 30 }}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={image}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {method}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">{number}</Button>
+                    </CardActions>
+                  </Card>
                 </div>
               )
             );
@@ -357,37 +366,40 @@ const Home = (props) => {
               index > 2 && (
                 <div
                   style={{
-                    backgroundColor: "slategray",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-evenly",
+                    // backgroundColor: "#00aaee",
+                    // display: "flex",
+                    // flexDirection: "column",
+                    // justifyContent: "space-evenly",
+                    // alignItems: "center",
+                    // width: "25%",
+                    // borderRadius: 8,
+                    // marginRight: 30,
+                    // paddingTop: 10,
+                    // boxShadow: "10px 5px 10px steelblue",
+                    marginRight: "10%",
+                    justifyContent: "center",
                     alignItems: "center",
-                    width: "25%",
-                    borderRadius: 8,
-                    marginRight: 30,
-                    paddingTop: 10,
-                    boxShadow: "10px 5px 10px steelblue",
                   }}
                 >
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrNG_bGBoDCAq0qIP92LzvTm4ZSeflr9bf2A&usqp=CAU"
-                    class="img-fluid"
-                    alt="..."
-                  />
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h1 style={{ fontWeight: "bold", paddingRight: 10 }}>
-                      {number}
-                    </h1>
-                    <h3 style={{}}> {method}</h3>
-                  </div>
-
-                  <h5 style={{ textAlign: "center" }}>{description}</h5>
+                  <Card sx={{ maxWidth: 345 }} style={{ marginBottom: 30 }}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={image}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {method}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">{number}</Button>
+                    </CardActions>
+                  </Card>
                 </div>
               )
             );
@@ -506,19 +518,23 @@ const Home = (props) => {
     <>
       <div
         class="container-fluid"
-        style={{ backgroundColor: "white", padding: 10 }}
+        style={{ padding: 10 }}
       >
+        <ParticlesBackground />
+        {/* <Header /> */}
+       
+        {/* <ParticlesBackground/> */}
         {/* Header */}
-        <Header  dark/>
+        <Header dark />
 
-        {carsoulFirst()}
+        {/* {carsoulFirst()} */}
 
         {projectDeliverInfo()}
 
         {skillsInfo()}
 
         {myMethodology()}
-        
+
         {quoteView()}
         {/* footer */}
         <Footer />
