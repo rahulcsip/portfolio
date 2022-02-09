@@ -116,8 +116,8 @@ const Contact = () => {
         <h3 style={{ marginBottom: 50 }}>
           Fill up a small form, and we will get back to you in 24*7
         </h3>
-        <form ref={form} onSubmit={sendEmailApi} class="row g-3">
-          <div class="col-12">
+        <form style={{display:"flex",justifyContent:'center',alignItems:"center"}} ref={form} onSubmit={sendEmailApi} class="row g-3">
+          <div style={{display:"flex",justifyContent:'center',alignItems:"center"}} class="col-12">
             <TextField
               style={{ width: "40%" }}
               required
@@ -131,7 +131,7 @@ const Contact = () => {
               //  defaultValue="Hello World"
             />
           </div>
-          <div class="col-12">
+          <div style={{display:"flex",justifyContent:'center',alignItems:"center"}} class="col-12">
             <TextField
               style={{ width: "40%" }}
               required
@@ -145,7 +145,7 @@ const Contact = () => {
               //  defaultValue="Hello World"
             />
           </div>
-          <div class="col-12">
+          <div style={{display:"flex",justifyContent:'center',alignItems:"center"}} class="col-12">
             <TextField
               style={{ width: "40%" }}
               required
@@ -160,7 +160,7 @@ const Contact = () => {
               //  defaultValue="Hello World"
             />
           </div>
-          <div class="col-12">
+          <div style={{display:"flex",justifyContent:'center',alignItems:"center"}} class="col-12">
             <TextField
               style={{ width: "40%" }}
               required
