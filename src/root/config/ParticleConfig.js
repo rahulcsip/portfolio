@@ -851,3 +851,142 @@ export const ParticleConfig = {
   "zLayers": 100
   }
   //export default  {ParticleConfig, ParticleConfigTwo};
+
+  export const NotFoundConfig = {
+    background: {
+      color: "#fff"
+    },
+    fpsLimit: 60,
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        resize: true,
+        onHover: {
+          enable: true,
+          mode: "bubble"
+        }
+      },
+      modes: {
+        bubble: {
+          distance: 300,
+          opacity: 0.8,
+          size: 100
+        }
+      }
+    },
+    particles: {
+      color: {
+        value: ["#f00", "#0f0", "#00f", "#ff0", "#0ff", "#f0f"],
+        animation: {
+          enable: true,
+          speed: 40,
+          sync: false
+        }
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: {
+          default: "bounce"
+        },
+        random: false,
+        speed: 10,
+        straight: false
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800
+        },
+        value: 160
+      },
+      opacity: {
+        random: {
+          enable: true,
+          minimumValue: 0.2
+        },
+        value: 0.8
+      },
+      shape: {
+        type: "circle"
+      },
+      stroke: {
+        color: "#ff0000",
+        width: 0
+      },
+      size: {
+        random: {
+          enable: true,
+          minimumValue: 25
+        },
+        value: 50
+      }
+    },
+    detectRetina: true
+  }
+
+  export const SpaceConfig = {
+    background: {
+      color: {
+        value: "#000",
+      },
+    },
+    fpsLimit: 60,
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onclick: { enable: true, mode: "repulse" },
+      onhover: {
+        enable: true,
+        mode: "bubble",
+        parallax: { enable: false, force: 2, smooth: 10 }
+      },
+      resize: true
+    },
+    modes: {
+      bubble: { distance: 200, duration: 2, opacity: 0, size: 0, speed: 3 },
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 },
+      repulse: { distance: 400, duration: 0.4 }
+    }
+  },
+  particles: {
+    color: { value: "#ffffff" },
+    line_linked: {
+      color: "#ffffff",
+      distance: 150,
+      enable: false,
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      attract: { enable: false, rotateX: 600, rotateY: 600 },
+      bounce: false,
+      direction: "none",
+      enable: true,
+      out_mode: "out",
+      random: true,
+      speed: 0.3,
+      straight: false
+    },
+    number: { density: { enable: true, value_area: 800 }, value: 600 },
+    opacity: {
+      anim: { enable: true, opacity_min: 0.3, speed: 5, sync: false },
+      random: {
+        enable: true,
+        minimumValue: 0.3
+      },
+      value: 0.6
+    },
+    shape: {
+      type: "circle"
+    },
+    size: {
+      anim: { enable: false, size_min: 0.3, speed: 4, sync: false },
+      random: false,
+      value: 1
+    }
+  },
+  retina_detect: true
+  };

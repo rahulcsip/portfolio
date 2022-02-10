@@ -3,3 +3,5 @@ props
 component
 route
 https://www.businessinsider.in/photo/81769906/how-to-reverse-image-search-on-google-to-find-information-related-to-a-specific-photo.jpg?imgsize=297676
+
+https://static.pexels.com/photos/326337/pexels-photo-326337.jpeg

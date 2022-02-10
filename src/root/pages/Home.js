@@ -520,7 +520,7 @@ const Home = (props) => {
         class="container-fluid"
         style={{ padding: 10 }}
       >
-        <ParticlesBackground />
+        {/* <ParticlesBackground /> */}
         {/* <Header /> */}
        
         {/* <ParticlesBackground/> */}

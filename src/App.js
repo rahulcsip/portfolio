@@ -9,6 +9,7 @@ import Header from "./root/component/Header";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Audio ,Watch } from  'react-loader-spinner'
 import  './App.css'
+import NotFound from "./root/pages/NotFound";
 const App = () => {
 
   const [ loader , setLoader ] = useState(true)
@@ -31,6 +32,7 @@ setLoader(false)
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/now" element={<Now />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   ) :(
     <div style={{display:"flex",height:"100vh",justifyContent:"center",alignItems:"center"}}>
