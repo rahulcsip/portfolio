@@ -10,6 +10,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Audio ,Watch } from  'react-loader-spinner'
 import  './App.css'
 import NotFound from "./root/pages/NotFound";
+import Project from "./root/pages/Project";
 const App = () => {
 
   const [ loader , setLoader ] = useState(true)
@@ -32,6 +33,7 @@ setLoader(false)
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/now" element={<Now />} />
+      <Route path="/project" element={<Project />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   ) :(
